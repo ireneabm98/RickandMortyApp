@@ -1,0 +1,17 @@
+.card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    img {
+        object-fit: cover;
+        height: 250px;
+    }
+    .card-body {
+        background-color: rgb(18, 185, 88);
+    }
+}
