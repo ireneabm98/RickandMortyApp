@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// src/app/app.ts
+import { Component } from '@angular/core';
+import { Characters } from './components/characters/characters'; // <--- Importa el componente
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  // Aquí se registra el componente Characters para que Angular lo pueda usar:
+  imports: [Characters], 
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss'],
 })
 export class App {
-  protected readonly title = signal('RickandMortyApp');
+  title = 'Rick & Morty - Personajes';
 }
