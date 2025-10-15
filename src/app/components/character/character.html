@@ -1,0 +1,21 @@
+<div class="overlay" *ngIf="character">
+    <div class="portal-background"></div>
+    <!-- 🌌 Fondo portal animado -->
+
+    <div class="character-card">
+        <div class="character-image">
+            <img [src]="character.image" [alt]="character.name">
+        </div>
+
+        <div class="character-body text-center">
+            <h3 class="character-name">{{ character.name }}</h3>
+            <p><strong>Género:</strong> {{ character.gender }}</p>
+            <p><strong>Especie:</strong> {{ character.species }}</p>
+            <p><strong>Episodios:</strong> {{ character.episode.length }}</p>
+
+            <button class="btn-close" type="button" (click)="cerrarDetalle()">
+                Cerrar detalle
+            </button>
+        </div>
+    </div>
+</div>

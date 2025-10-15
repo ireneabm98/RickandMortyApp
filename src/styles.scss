@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: radial-gradient(circle at center, #003300 0%, #000000 100%);
+    background-size: cover;
+    color: #ffffff;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient( from 0deg, #39ff14, #00ff99, #39ff14, #00cc66, #39ff14, #00ff99, #39ff14);
+    animation: spinPortal 10s linear infinite;
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+@keyframes spinPortal {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

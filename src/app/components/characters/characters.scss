@@ -1,17 +1,85 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 50%, #0b0c10 0%, #1f2833 80%);
+    color: #c5c6c7;
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+}
+
+
+/* Cards de personajes */
+
 .card {
-    border: none;
+    border: 2px solid #66fcf1;
     border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+    transition: all 0.3s ease;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(31, 40, 51, 0.9);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(102, 252, 241, 0.6);
+}
+
+
+/* Imagen */
+
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 1px solid #66fcf1;
+}
+
+
+/* Contenido de la card */
+
+.card-body {
+    color: #c5c6c7;
+    padding: 1rem;
+}
+
+.card-title {
+    color: #66fcf1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(102, 252, 241, 0.6);
+    margin-bottom: 0.6rem;
+}
+
+.card-text strong {
+    color: #45a29e;
+}
+
+
+/* Botón "Detalle" */
+
+button {
+    background-color: #45a29e;
+    border: none;
+    color: #0b0c10;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #66fcf1;
+    color: #1f2833;
+    box-shadow: 0 0 10px #66fcf1;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 180px;
     }
-    img {
-        object-fit: cover;
-        height: 250px;
-    }
-    .card-body {
-        background-color: rgb(18, 185, 88);
+    .card-title {
+        font-size: 1rem;
     }
 }

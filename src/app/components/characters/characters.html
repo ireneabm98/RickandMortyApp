@@ -1,15 +1,40 @@
 <div class="container mt-4">
-    <div class="row">
+    <h2 class="text-center mb-4 text-info fw-bold">Rick & Morty</h2>
+
+    <div class="row justify-content-center">
+        <!-- 🔁 Bucle de personajes -->
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let character of characters">
             <div class="card shadow-sm h-100 text-center">
-                <img [attr.src]="character.image" [attr.alt]="character.name" class="card-img-top">
+                <!-- Imagen -->
+                <img [attr.src]="character.image" [attr.alt]="character.name" class="card-img-top" />
+
                 <div class="card-body">
-                    <h5 class="card-title">{{ character.name }}</h5>
-                    <p class="card-text mb-1"><strong>Estado:</strong> {{ character.status }}</p>
-                    <p class="card-text mb-1"><strong>Especie:</strong> {{ character.species }}</p>
-                    <p class="card-text"><strong>Género:</strong> {{ character.gender }}</p>
+                    <!-- ✅ Nombre del personaje -->
+                    <h5 class="card-title text-info fw-bold mb-2" appUppercase>
+                        {{ character.name }}
+                    </h5>
+
+                    <!-- Datos del personaje -->
+                    <p class="card-text mb-1">
+                        <strong>Estado:</strong> {{ character.status }}
+                    </p>
+                    <p class="card-text mb-1">
+                        <strong>Especie:</strong> {{ character.species }}
+                    </p>
+                    <p class="card-text">
+                        <strong>Género:</strong> {{ character.gender }}
+                    </p>
+
+                    <!-- Botón detalle -->
+                    <button class="btn btn-primary btn-sm mt-2" (click)="verDetalle(character)">
+                        Detalle
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- 🧩 Mostrar el componente hijo solo si hay un personaje seleccionado -->
+    <app-character *ngIf="selectedCharacter" [character]="selectedCharacter" (cerrar)="selectedCharacter = undefined">
+    </app-character>
 </div>
