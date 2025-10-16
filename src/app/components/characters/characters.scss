@@ -8,7 +8,7 @@
 }
 
 
-/* Cards de personajes */
+/*Cards de personajes*/
 
 .card {
     border: 2px solid #66fcf1;
@@ -24,17 +24,11 @@
     box-shadow: 0 0 40px rgba(102, 252, 241, 0.6);
 }
 
-
-/* Imagen */
-
 .card-img-top {
     height: 230px;
     object-fit: cover;
     border-bottom: 1px solid #66fcf1;
 }
-
-
-/* Contenido de la card */
 
 .card-body {
     color: #c5c6c7;
@@ -53,9 +47,6 @@
     color: #45a29e;
 }
 
-
-/* Botón "Detalle" */
-
 button {
     background-color: #45a29e;
     border: none;
@@ -71,9 +62,6 @@ button:hover {
     color: #1f2833;
     box-shadow: 0 0 10px #66fcf1;
 }
-
-
-/* Responsive */
 
 @media (max-width: 768px) {
     .card-img-top {
